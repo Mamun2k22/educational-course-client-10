@@ -32,6 +32,7 @@ const Faq = () => {
             </div>
         </div>
     );
+    // Done faq
 };
 
 export default Faq;
