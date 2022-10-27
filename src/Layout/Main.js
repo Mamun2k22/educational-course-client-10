@@ -10,5 +10,6 @@ const Main = () => {
         </div>
     );
 };
+// main is done
 
 export default Main;
