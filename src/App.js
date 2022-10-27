@@ -11,6 +11,7 @@ import Main from './Layout/Main';
 import Courses from './component/Courses';
 import Blog from './component/Blog';
 import Faq from './component/Faq';
+import PrivetRouts from './component/PrivetRouts';
 function App() {
   const router = createBrowserRouter([
     {
@@ -50,7 +51,7 @@ function App() {
         },
         {
           path: '/courses/pd/:id',
-          element: <Primium></Primium>,
+          element: <PrivetRouts><Primium ></Primium></PrivetRouts>,
           loader: ({ params }) => fetch(`http://localhost:5000/courses/pd/${params.id}`)
         },
         {

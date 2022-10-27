@@ -7,10 +7,11 @@ const Courses = () => {
     const courses = useLoaderData();
     const { _id } = courses;
     return (
-        <div className='grid grid-cols-5'>
+        <div className='grid lg:grid-cols-5'>
 
-            <div className='cols-span-4'>
-                <div className='grid lg:grid-cols-3'>
+            <div className='col-span-4'>
+
+                <div className='grid lg:grid-cols-3 gap-5'>
                     {
                         courses.map(course => <CourseTopic
                             key={course._id}

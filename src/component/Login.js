@@ -1,8 +1,10 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
+
     const { LogIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const handleSubmit = (event) => {
@@ -19,6 +21,7 @@ const Login = () => {
                 navigate('/')
             })
             .catch(e => console.error(e))
+
 
 
     }
@@ -85,6 +88,8 @@ const Login = () => {
 
                         <p className='px-6 text-sm text-center text-dark'>
                             Don't have an account yet?{' '}
+
+
                             <Link to='/register' className='hover:underline text-dark'>
 
                             </Link>
