@@ -36,7 +36,7 @@ const Register = () => {
     //             })
     //     }
 
-
+    // Authentication
     const handleSubmit = event => {
         event.preventDefault();
 

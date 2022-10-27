@@ -3,11 +3,45 @@ import { useLoaderData } from 'react-router-dom';
 
 const Primium = () => {
     const data = useLoaderData();
-    const { name } = data;
+    const { id, category_id, total_view, title, author, details, thumbnail_url, rating, } = data;
+
     return (
-        <div>
-            <h1> {name} </h1>
-        </div>
+        <>
+            <div className="hero min-h-screen bg-base-200">
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <div className="text-center lg:text-left">
+                        <h1 className="text-5xl font-bold">{title}</h1>
+                        <p className="py-6">{details}</p>
+                    </div>
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                        <div className="card-body">
+                            <h3 className='text-3xl font-semibold mx-auto'>Purchase</h3>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Name</span>
+                                </label>
+                                <input type="text" placeholder="Your name" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Email</span>
+                                </label>
+                                <input type="Your Email" placeholder="email" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Phone</span>
+                                </label>
+                                <input type="text" placeholder="Your Phone" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control mt-6">
+                                <button onClick={handlePurchase} className="btn btn-primary">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 };
 
