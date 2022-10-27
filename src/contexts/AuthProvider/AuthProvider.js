@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth'
+import { createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth'
 import app from '../../firebase/firebase.config';
 const auth = getAuth(app);
 
@@ -23,6 +23,13 @@ const AuthProvider = ({ children }) => {
         return signOut(auth);
     }
 
+    const githubSingIn = (gitProvider) => {
+        return signInWithPopup(auth, gitProvider)
+    }
+    const googleSignin = (gProvider) => {
+        return signInWithPopup(auth, gProvider)
+    }
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             console.log('User inside Stage change', currentUser);
@@ -33,7 +40,8 @@ const AuthProvider = ({ children }) => {
         }
     }, [])
 
-    const authInfo = { user, providerLogin, logOut, createUser, LogIn };
+    const authInfo = { user, providerLogin, logOut, createUser, LogIn, githubSingIn, googleSignin };
+
 
     return (
         <AuthContext.Provider value={authInfo}>
