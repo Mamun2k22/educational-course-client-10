@@ -36,5 +36,6 @@ const Courses = () => {
         </div>
     );
 };
+// Course done
 
 export default Courses;
