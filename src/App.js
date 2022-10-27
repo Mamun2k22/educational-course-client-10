@@ -49,8 +49,9 @@ function App() {
 
         },
         {
-          path: '/courses/:id',
-          element: <Primium></Primium>
+          path: '/courses/pd/:id',
+          element: <Primium></Primium>,
+          loader: ({ params }) => fetch(`http://localhost:5000/courses/pd/${params.id}`)
         },
         {
           path: '/blog',

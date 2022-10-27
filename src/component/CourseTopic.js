@@ -8,7 +8,7 @@ const CourseTopic = ({ course }) => {
         <div>
             <div>
                 <h1>{title}</h1>
-                <Link to={`/courses/${_id}`}></Link>
+                <Link to={`/courses/${_id}`}> <p>Submit</p></Link>
             </div>
         </div>
     );
