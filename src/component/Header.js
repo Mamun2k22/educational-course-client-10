@@ -18,13 +18,13 @@ const Header = () => {
                         <div className='relative flex items-center justify-between'>
                             <div className='flex'>
                                 <div><img className='w-24' src="../images/crop.png" alt="" srcset="" /></div>
-                                <div><Link to='/home' className="btn btn-ghost normal-case hover:bg-blue-400 p-1 rounded-lg text-xl mt-5 switeh"><h1>EduZone</h1></Link></div>
+                                <div><Link to='/home' className="btn btn-ghost normal-case hover:bg-orange-400 p-1 rounded-lg text-xl mt-5 switeh"><h1>EduZone</h1></Link></div>
                             </div>
                             <ul className='flex switeh font-bold  items-center hidden space-x-8 lg:flex'>
-                                <li className='hover:bg-blue-400 p-1 rounded-lg'><Link to='/home'>Home</Link></li>
-                                <li className='hover:bg-blue-400 p-1 rounded-lg'><Link to='/courses'>Courses</Link></li>
-                                <li className='hover:bg-blue-400 p-1 rounded-lg'><Link to='/faq'>FAQ</Link></li>
-                                <li className='hover:bg-blue-400 p-1 rounded-lg'><Link to='/blog'>Blog</Link></li>
+                                <li className='hover:bg-orange-400 p-1 rounded-lg'><Link to='/home'>Home</Link></li>
+                                <li className='hover:bg-orange-400 p-1 rounded-lg'><Link to='/courses'>Courses</Link></li>
+                                <li className='hover:bg-orange-400 p-1 rounded-lg'><Link to='/faq'>FAQ</Link></li>
+                                <li className='hover:bg-orange-400 p-1 rounded-lg'><Link to='/blog'>Blog</Link></li>
                                 {/* <li className='mr-2 '>
 
                                     <div className='switeh flex w-100% gap-2'>
@@ -60,8 +60,8 @@ const Header = () => {
 
                                             <div >
                                                 <ul className='className="menu menu-horizontal p-0 flex gap-4'>
-                                                    <li className='hover:bg-blue-400 p-1 rounded-lg'><Link to='/login'>Log-In</Link></li>
-                                                    <li className='hover:bg-blue-400 p-1 rounded-lg'><Link to='/register'>Register</Link></li>
+                                                    <li className='hover:bg-yellow-500 p-1 rounded-lg'><Link to='/login'>Log-In</Link></li>
+                                                    <li className='hover:bg-yellow-500 p-1 rounded-lg'><Link to='/register'>Register</Link></li>
                                                 </ul>
                                             </div>
 
@@ -161,8 +161,8 @@ const Header = () => {
 
                                                                 <div >
                                                                     <ul className='className="menu menu-horizontal p-0 flex gap-4'>
-                                                                        <li className='hover:bg-blue-400 p-1 rounded-lg'><Link to='/login'>Log-In</Link></li>
-                                                                        <li className='hover:bg-blue-400 p-1 rounded-lg'><Link to='/register'>Register</Link></li>
+                                                                        <li className='hover:bg-yellow-400 p-1 rounded-lg'><Link to='/login'>Log-In</Link></li>
+                                                                        <li className='hover:bg-yellow-400 p-1 rounded-lg'><Link to='/register'>Register</Link></li>
                                                                     </ul>
                                                                 </div>
 
