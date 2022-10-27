@@ -2,8 +2,14 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const Primium = () => {
+    const booking = (event) => {
+        event.preventDefault()
+        alert("Thanks for Payment!")
+
+    };
     const data = useLoaderData();
     const { id, category_id, total_view, title, author, details, thumbnail_url, rating, } = data;
+
 
     return (
         <>
@@ -35,7 +41,7 @@ const Primium = () => {
                                 <input type="text" placeholder="Your Phone" className="input input-bordered" required />
                             </div>
                             <div className="form-control mt-6">
-                                <button onClick={handlePurchase} className="btn btn-primary">Purchase</button>
+                                <button onClick={booking} className="btn btn-primary">Purchase</button>
                             </div>
                         </div>
                     </div>

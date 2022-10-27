@@ -50,5 +50,6 @@ const AuthProvider = ({ children }) => {
 
     );
 };
+// auth provider is done
 
 export default AuthProvider;
