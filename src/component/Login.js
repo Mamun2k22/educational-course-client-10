@@ -1,10 +1,11 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
-
+    const [error, setError] = useState('')
     const { LogIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const handleSubmit = (event) => {
@@ -15,12 +16,17 @@ const Login = () => {
         LogIn(email, password)
 
             .then(result => {
+                setError('')
                 const user = result.user;
                 console.log(user);
                 form.reset();
                 navigate('/')
             })
-            .catch(e => console.error(e))
+            .catch((error) => {
+                console.log(error);
+
+                setError("wrong password")
+            });
 
 
 
@@ -72,6 +78,7 @@ const Login = () => {
                                         placeholder='*****'
                                         className='w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-200 focus:border-gray-900 text-gray-900'
                                     />
+                                    <p>{error}</p>
                                 </div>
                             </div>
                             {/* <p className='text-red-500	'>{error}</p> */}
