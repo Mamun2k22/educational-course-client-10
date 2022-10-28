@@ -15,12 +15,14 @@ import PrivetRouts from './component/PrivetRouts';
 import Footer from './component/Footer';
 import { useState } from 'react';
 import { createContext } from 'react';
+import Error from './component/Error';
 
 export const ThemContext = createContext(null)
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
+      errorElement: <Error></Error>,
       element: <Main></Main>,
       children: [
         {
