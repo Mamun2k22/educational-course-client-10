@@ -2,12 +2,15 @@ import React from 'react';
 import { useContext } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ReactSwitch from 'react-switch';
+import { ThemContext } from '../App';
 import { AuthContext } from '../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
     const { user } = useContext(AuthContext)
     // const { theme, themToggel } = useContex(ThemContext)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const { theme, themToggel } = useContext(ThemContext)
     return (
         <div>
             <div>
@@ -25,13 +28,13 @@ const Header = () => {
                                 <li className='hover:bg-orange-400 p-1 rounded-lg'><Link to='/courses'>Courses</Link></li>
                                 <li className='hover:bg-orange-400 p-1 rounded-lg'><Link to='/faq'>FAQ</Link></li>
                                 <li className='hover:bg-orange-400 p-1 rounded-lg'><Link to='/blog'>Blog</Link></li>
-                                {/* <li className='mr-2 '>
+                                <li className='mr-2 '>
 
                                     <div className='switeh flex w-100% gap-2'>
                                         <label>{theme === 'light' ? "Light Mood" : "Dark Mood"}</label>
-                                        <ReactSwitc onChange={themToggel} checked={theme === "light"}></ReactSwitch>
+                                        <ReactSwitch onChange={themToggel} checked={theme === "light"}></ReactSwitch>
                                     </div>
-                                </li> */}
+                                </li>
                                 <li>
                                     <div className="" >
                                         {user?.uid ? <div className="dropdown dropdown-end tooltip tooltip-bottom" data-tip={user?.displayName ? user.displayName : 'Name Not Available'}>

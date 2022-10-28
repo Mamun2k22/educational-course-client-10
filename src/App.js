@@ -13,6 +13,10 @@ import Blog from './component/Blog';
 import Faq from './component/Faq';
 import PrivetRouts from './component/PrivetRouts';
 import Footer from './component/Footer';
+import { useState } from 'react';
+import { createContext } from 'react';
+
+export const ThemContext = createContext(null)
 function App() {
   const router = createBrowserRouter([
     {
@@ -73,11 +77,20 @@ function App() {
       ]
     }
   ])
+  const [theme, setTheme] = useState("light");
+  const themToggel = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"))
+  }
   return (
-    <div className="App">
+    <ThemContext.Provider value={{ theme, themToggel }}>
 
-      <RouterProvider router={router}></RouterProvider>
-    </div>
+      <div className="App " id={theme}>
+
+
+
+        <RouterProvider router={router}></RouterProvider>
+      </div> </ThemContext.Provider>
+
   );
 }
 
