@@ -41,8 +41,8 @@ const Header = () => {
                                             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                                 <div>
                                                     <div className="w-10 rounded-full">
-                                                        <span className='ms-2'>{user?.photoURL ?
-                                                            <img src={user.photoURL} />
+                                                        <span className='ms-2 '>{user?.photoURL ?
+                                                            <img className='rounded-circle' src={user.photoURL} />
 
                                                             :
                                                             <p>No Photo</p>
