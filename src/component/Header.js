@@ -17,7 +17,7 @@ const Header = () => {
                     <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
                         <div className='relative flex items-center justify-between'>
                             <div className='flex'>
-                                <div><img className='w-24' src="../images/crop.png" alt="" srcset="" /></div>
+                                <div><img className='w-24' src="https://img.freepik.com/free-photo/human-face-with-unity-design-3d-rendered-illustration_460848-11275.jpg?w=740&t=st=1666925590~exp=1666926190~hmac=6428f474d6812abb16a863bf2cb51ff2ebfd85fd907ec2be392e68d15fe49b9b" alt="" srcset="" /></div>
                                 <div><Link to='/home' className="btn btn-ghost normal-case hover:bg-orange-400 p-1 rounded-lg text-xl mt-5 switeh"><h1>EduZone</h1></Link></div>
                             </div>
                             <ul className='flex switeh font-bold  items-center hidden space-x-8 lg:flex'>
@@ -102,7 +102,7 @@ const Header = () => {
                                             <div className='flex  items-center justify-between mb-4'>
                                                 <div>
                                                     <div className='flex'>
-                                                        <div><img className='w-24' src="../images/crop.png" alt="" srcset="" /></div>
+                                                        <div><img className='w-24' src="https://img.freepik.com/free-photo/human-face-with-unity-design-3d-rendered-illustration_460848-11275.jpg?w=740&t=st=1666925590~exp=1666926190~hmac=6428f474d6812abb16a863bf2cb51ff2ebfd85fd907ec2be392e68d15fe49b9b" alt="" srcset="" /></div>
                                                         <div><Link to='/home' className="btn btn-ghost normal-case hover:bg-blue-400 p-1 rounded-lg switeh text-xl mt-5 switeh"><h1 >EduZone</h1></Link></div>
                                                     </div>
                                                 </div>
